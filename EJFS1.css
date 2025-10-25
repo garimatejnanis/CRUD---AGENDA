@@ -1,0 +1,199 @@
+body, html{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.formularioEdit, .formularioCreate{
+    display: none;
+}
+
+#formularioCreate, #formularioEdit{
+    background-color:#604260;
+    border-top: none 0 #000000;
+    border-right: 10px double #000000;
+    border-bottom: none 0 #000000;
+    border-left: 10px inset #000000;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    margin: 15px;
+    padding: 10px;
+}
+
+.caja{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.caja1{
+    width: 300px;
+    text-align: center;
+}
+
+h2, h3{
+    font-size: 25px;
+}
+
+.error{
+    color: #FF0000;
+}
+
+.mostrarDatos{
+    width: 400px;
+}
+
+table{
+    margin: auto;
+    border-collapse:separate;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+thead{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+tr{
+    border-bottom: 1px solid #ccc;
+}
+
+
+td, th{
+    padding: 5px 30px;
+    text-align: center;
+}
+
+.mostrarDatos a{
+    color: #000;
+}
+
+.mostrarDatos a:hover{
+    color:  #DDDD04;
+}
+
+.botonEditar{
+    padding: 5px;
+    font-size: 15px;
+    background-color: #417FDC;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+.botonEditar:hover{
+    background-color: #6EA1ED;   
+}
+
+.botonEliminar{
+    padding: 5px;
+    font-size: 15px;
+    background-color:#E41717;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+.botonEliminar:hover{
+    background-color: #F34040;
+}
+
+.mostrarFormulario {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;            
+    width: 100%;
+    height: auto;
+    background-color: #f3f3f3;
+}
+
+.mostrarFormulario button{
+    background-color: rgb(2, 148, 2);
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 15px;
+    color: #ffffff;
+}
+
+.mostrarFormulario button:hover{
+    background-color: #02A702;
+}
+
+.cajita{
+    width: 250px;
+    overflow: hidden;
+}
+
+.marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: mover 10s linear infinite;
+}
+
+h1 a{
+  color: #000000;
+  text-decoration: none;
+}
+
+/*Animación para el marquee*/
+@keyframes mover {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+
+.formularioCreate button,
+.formularioEdit button {
+    padding: 5px;
+    font-size: 15px;
+    background-color: #F58D0D;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+.formularioCreate button:hover,
+.formularioEdit button:hover {
+    background-color: #FA9B26;
+}
+
+/*Para movil*/
+@media (max-width: 600px){
+    .mostrarFormulario{
+        width: 200%;
+    }
+
+    .caja{
+        width: 750px;
+        height: auto;
+    }
+
+    .caja2{
+        width: 750px;
+    }
+}
+
+#buscarNombre{  
+    padding: 5px; 
+    width: 400px;
+    margin-top: 10px;
+}
+
+.caja2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#mensajeNoEncontrado{
+    text-align:center; 
+    font-weight:bold; 
+    color:gray; 
+    display:none;
+}

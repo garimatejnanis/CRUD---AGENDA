@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGENDA</title>
+    <script src="EJFS1.js" defer></script>
+    <link rel="stylesheet" href="EJFS1.css">
+</head>
+<body>
+    <div class="mostrarFormulario" id="mostrarFormulario" name="mostrarFormulario">
+        <div class="cajita"><marquee><h1><a href="EJFS1.html">CRUD de Agenda</a></h1></marquee></div>
+        <button type="button" onclick="return contacto.mostrarFormulario()">Crear Contacto</button>
+    </div>
+
+    <div class="caja" id="caja">
+        <div class="caja1" id="caja1">   
+            <form onsubmit="return contacto.validacionesFormulario() && contacto.createContacto()" method="POST" class="formularioCreate" id="formularioCreate" name="formularioCreate">
+            <h2 id="titulo2">Nuevo Contacto</h2>
+                <label>Nombre</label><br>
+                <input type="text" class="nombre" id="nombre" name="nombre"><br><br>
+                <p class="error" id="nombreVal"></p>
+
+                <label>Telefono</label><br>
+                <input type="tel" class="telefono" id="telefono" name="telefono"><br><br>
+                <p class="error" id="telefonoVal"></p>
+                
+                <label>Email</label><br>
+                <input type="email" class="email" id="email" name="email"><br><br>
+                <p class="error" id="emailVal"></p>
+
+                <button type="submit" class="submit" id="submit" name="submit">Guardar Contacto</button>
+            </form>
+        </div>  
+    </div>
+
+    <div id="tabla-contactos"></div>
+
+    <div class="caja" id="caja">
+        <div class="caja1" id="caja1">   
+            <form onsubmit="return contacto.validacionesFormularioEdit() && contacto.updateContacto()" class="formularioEdit" id="formularioEdit" name="formularioEdit">
+                <h3>Editar Contacto</h3>
+                <input type="hidden" id="id_contacto" name="id_contacto" class="id_contacto">
+                
+                <label>Nombre</label><br>
+                <input type="text" class="nombreContactoEdit" id="nombreContactoEdit" name="nombreContactoEdit"><br><br>
+                <p class="error" id="nombreEditVal"></p>
+
+                <label>Telefono</label><br>
+                <input type="tel" class="telefonoContactoEdit" id="telefonoContactoEdit" name="telefonoContactoEdit"><br><br>
+                <p class="error" id="telefonoEditVal"></p>
+
+                <label>Email</label><br>
+                <input type="email" class="emailContactoEdit" id="emailContactoEdit" name="emailContactoEdit"><br><br>
+                <p class="error" id="emailEditVal"></p>
+
+                <button type="submit" class="submit" id="submit" name="submit">Editar Contacto</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
